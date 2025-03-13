@@ -1,0 +1,111 @@
+[prompts]
+prompt_1 = """Your task is to provide a coherent rationale and a confidence score while evaluating the provided text-image pair **from a non-sarcastic perspective**, acknowledging that this interpretation may sometimes be implausible. Your goal is to identify and elaborate on any potential non-sarcastic elements, but also recognize and justify cases where no non-sarcastic interpretation can stand.
+
+**Analysis Steps:**
+
+1. **Content Analysis**  
+   - Examine the text and image independently, focusing on their literal or straightforward meanings.  
+   - Highlight any details that could support a non-sarcastic reading, even if they are minimal or weak.  
+   - If either the text or image offers no apparent non-sarcastic interpretation, explicitly note this.
+
+2. **Interaction Evaluation**  
+   - Assess how the text and image might align to form a coherent, straightforward perspective.  
+   - Describe any clear, non-ironic relationships or themes that arise when considering them together.  
+   - If the text and image inherently clash in a way that strongly implies sarcasm, explain why a non-sarcastic viewpoint is unlikely.
+
+3. **Contextual Assessment**  
+   - Consider any cultural, social, or situational cues that could enhance or undermine a non-sarcastic interpretation.  
+   - Briefly justify whether these contextual elements bolster the possibility of sincerity or negate it.
+
+4. **Boundary Condition Check**  
+   - Decide if a non-sarcastic reading is at all justifiable.  
+   - If it is **entirely** implausible, clarify why this is the case and proceed to Step 6 (Confidence Scoring) directly.
+
+5. **Non-Sarcastic Rationale**  
+   - If a non-sarcastic interpretation is viable, present a concise rationale (limit to **{x}** words) showing how the text-image pair can be understood in a sincere or literal manner.  
+   - Reference observations from Steps 1–3 to support your rationale.
+
+6. **Confidence Scoring**  
+   - Assign a **single `score`** between **0** and **1** reflecting how likely you believe a non-sarcastic interpretation is.  
+     - A score closer to 1 suggests strong evidence for a sincere reading.  
+     - A score near 0 indicates a minimal or highly improbable non-sarcastic perspective.  
+   - If you concluded in Step 4 that no non-sarcastic interpretation holds, assign a score of **0** and explain briefly.
+
+**Output Requirements**  
+- Provide your answer **strictly** in JSON format with two fields:  
+  - `rationale` [string]: Rationale for the non-sarcastic perspective or justification for why no such interpretation is plausible.  
+  - `score` [float]: Confidence score for the non-sarcastic interpretation."""
+
+prompt_2 = """Your objective is to deliver a clear rationale and a confidence score while assessing the provided text-image pair **from a non-sarcastic viewpoint**, recognizing that this interpretation might sometimes be unfeasible. Aim to uncover and detail any possible non-sarcastic elements, while also identifying and justifying instances where such an interpretation cannot be sustained.
+
+**Analysis Steps:**
+
+1. **Content Examination**  
+   - Analyze the text and image separately, concentrating on their explicit or straightforward meanings.  
+   - Identify any aspects that might support a non-sarcastic understanding, even if they are limited or subtle.  
+   - If either the text or image lacks a clear non-sarcastic interpretation, explicitly mention this.
+
+2. **Alignment Assessment**  
+   - Evaluate how the text and image might work together to present a unified, straightforward message.  
+   - Describe any evident, non-ironic connections or themes that emerge when considering them jointly.  
+   - If the text and image naturally conflict in a manner that strongly suggests sarcasm, explain why a non-sarcastic interpretation is improbable.
+
+3. **Contextual Consideration**  
+   - Take into account any cultural, social, or situational factors that could support or weaken a non-sarcastic interpretation.  
+   - Briefly explain whether these contextual elements enhance the likelihood of sincerity or detract from it.
+
+4. **Feasibility Determination**  
+   - Decide whether a non-sarcastic interpretation is justifiable.  
+   - If it is **completely** unfeasible, clarify the reasons and proceed directly to Step 6 (Confidence Scoring).
+
+5. **Non-Sarcastic Rationale**  
+   - If a non-sarcastic interpretation is possible, provide a concise rationale (limit to **{x}** words) explaining how the text-image pair can be understood sincerely or literally.  
+   - Reference insights from Steps 1–3 to support your rationale.
+
+6. **Confidence Scoring**  
+   - Assign a **single `score`** between **0** and **1** indicating the likelihood of a non-sarcastic interpretation.  
+     - A score closer to 1 signifies strong support for a sincere reading.  
+     - A score near 0 indicates a minimal or highly unlikely non-sarcastic perspective.  
+   - If you determined in Step 4 that no non-sarcastic interpretation is feasible, assign a score of **0** and provide a brief explanation.
+
+**Output Requirements**  
+- Submit your response **strictly** in JSON format with two fields:  
+  - `rationale` [string]: Rationale for the non-sarcastic perspective or justification for why no such interpretation is plausible.  
+  - `score` [float]: Confidence score for the non-sarcastic interpretation."""
+
+prompt_3 = """Your mission is to generate a coherent rationale and a confidence score while analyzing the provided text-image pair **from a non-sarcastic standpoint**, acknowledging that this perspective might occasionally be unachievable. Strive to identify and elaborate on any non-sarcastic elements, while also recognizing and justifying scenarios where a non-sarcastic interpretation is untenable.
+
+**Analysis Steps:**
+
+1. **Content Inspection**  
+   - Scrutinize the text and image individually, emphasizing their literal or direct meanings.  
+   - Highlight any components that could support a non-sarcastic interpretation, even if they are minimal or faint.  
+   - If either the text or image lacks a discernible non-sarcastic meaning, clearly state this.
+
+2. **Synergy Evaluation**  
+   - Assess how the text and image might combine to convey a consistent, straightforward message.  
+   - Describe any obvious, non-ironic connections or themes that become apparent when viewed together.  
+   - If the text and image inherently conflict in a way that strongly suggests sarcasm, explain why a non-sarcastic viewpoint is unlikely.
+
+3. **Contextual Analysis**  
+   - Consider any cultural, social, or situational elements that could support or undermine a non-sarcastic interpretation.  
+   - Briefly justify whether these contextual factors enhance the possibility of a sincere reading or detract from it.
+
+4. **Viability Check**  
+   - Determine if a non-sarcastic interpretation is feasible.  
+   - If it is **entirely** unfeasible, clarify the reasons and move directly to Step 6 (Confidence Scoring).
+
+5. **Non-Sarcastic Rationale**  
+   - If a non-sarcastic interpretation is achievable, provide a concise rationale (limit to **{x}** words) explaining how the text-image pair can be understood sincerely or literally.  
+   - Reference findings from Steps 1–3 to support your rationale.
+
+6. **Confidence Scoring**  
+   - Assign a **single `score`** between **0** and **1** representing the likelihood of a non-sarcastic interpretation.  
+     - A score closer to 1 indicates strong support for a sincere reading.  
+     - A score near 0 signifies a minimal or highly improbable non-sarcastic perspective.  
+   - If you concluded in Step 4 that no non-sarcastic interpretation is viable, assign a score of **0** and briefly explain why.
+
+**Output Requirements**  
+- Provide your response **strictly** in JSON format with two fields:  
+  - `rationale` [string]: Rationale for the non-sarcastic perspective or justification for why no such interpretation is plausible.  
+  - `score` [float]: Confidence score for the non-sarcastic interpretation."""

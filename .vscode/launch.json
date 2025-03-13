@@ -1,0 +1,104 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "run vllm",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/vllm_serve.py",
+      "args": [
+        "serve",
+        "llava-hf/llava-1.5-7b-hf",
+        "--task",
+        "generate",
+        "--trust-remote-code",
+        "--limit-mm-per-prompt",
+        "image=1",
+        "--chat-template",
+        "chat_templates/llava.jinja",
+        "--max-num-seqs",
+        "1"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+
+    // llava-hf/llava-1.5-7b-hf  --task generate --trust-remote-code  --limit-mm-per-prompt image=1 --chat-template chat_templates/llava.jinja  --max-num-seqs 1
+    {
+      "name": "run_openai",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/run_openai.py",
+      "args": [
+        "--dataset-path",
+        "coderchen01/MMSD2.0",
+        "--dataset-name",
+        "mmsd-v2",
+        "--dataset-split",
+        "test",
+        "--output-path",
+        "openai-output",
+        "--num-proc",
+        "1",
+        "--num-debug-samples",
+        "10",
+        "--model",
+        "gpt-4o-mini"
+      ],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "console": "integratedTerminal"
+    },
+
+    {
+      "name": "run_vllm",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/run_sarcasm_bench.py",
+      "args": [
+        "--dataset-path",
+        "coderchen01/MMSD2.0",
+        "--dataset-name",
+        "mmsd-v2",
+        "--dataset-split",
+        "test",
+        "--output-path",
+        "../mmsd-bench-data/musa-output/",
+        "--config-file-path",
+        "../mmsd-bench-data/config.json",
+        "--num-debug-samples",
+        "50",
+        "vllm",
+        "--model",
+        "OpenGVLab/InternVL2-8B"
+      ],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "run_analysis",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "/home/chenjunjie/miniconda3/envs/mmsd/bin/musa-analysizer",
+      "args": [
+        "--data-path",
+        "/home/chenjunjie/Research/mmsd-bench-data/final-musa-output-v2/final-result-03",
+        "--output-path",
+        "/home/chenjunjie/Research/mmsd-bench-data/final-musa-output-v2/visual_results"
+      ],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "console": "integratedTerminal"
+    }
+  ]
+}

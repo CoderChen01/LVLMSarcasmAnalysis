@@ -1,0 +1,84 @@
+[prompts]
+prompt_1 = """Your task is to analyze a text-image pair to classify it as "sarcastic," "non-sarcastic," or "neutral." Additionally, provide a concise rationale for your classification and a confidence score between 0 and 1.
+
+**Analysis Steps:**
+
+1. **Separate Content Analysis**
+   - **Text Analysis**: Carefully parse the text. Identify any markers of irony, hyperbole, contradiction, literal meaning, or ambiguity that might support multiple interpretations. Consider nuances such as slang, rhetorical questions, cultural references, or unusual phrasing.
+   - **Image Analysis**: Thoroughly examine the image. Look for facial expressions, gestures, objects, or scene elements that may indicate irony, sincerity, or ambiguity. Pay attention to visual details that either reinforce or contradict the text.
+
+2. **Cross-Modal Interaction**
+   - Evaluate how the text and image interact. Determine if they contradict, reinforce, or balance each other. Identify any incongruities, contrasts, alignments, or ambiguities that could suggest sarcasm, non-sarcasm, or neutrality.
+
+3. **Contextual Evaluation**
+   - Consider cultural, social, or situational factors that might influence the classification. Analyze any markers of sarcasm, non-sarcasm, or neutrality, such as cultural references or ambiguous humor conventions. 
+   - Acknowledge the presence of ambiguous or borderline cases. If context is missing or conflicting, assess how it affects your confidence level.
+
+4. **Classification and Rationale**
+   - Classify the pair as **sarcastic**, **non-sarcastic**, or **neutral.**
+   - Provide a concise rationale for your decision, limited to **{x} words**. Clearly connect the observed cues from both text and image to support your classification.
+
+5. **Confidence Scoring**
+   - Assign a confidence score between **0 and 1**. For "neutral," this score should reflect the degree to which the evidence is balanced or ambiguous. This score represents how certain you are of your classification, considering all nuances and ambiguities.
+
+**Output Requirements**:
+- Return your answer **strictly in JSON format** with the following fields only:
+  - `classification`: "sarcastic", "non-sarcastic", or "neutral"
+  - `rationale`: A brief text rationale (≤ {x} words)
+  - `score`: A float between 0 and 1"""
+
+prompt_2 = """Your task is to evaluate a text-image pair and categorize it as "sarcastic," "non-sarcastic," or "neutral." Additionally, provide a succinct rationale for your classification and a confidence score ranging from 0 to 1.
+
+**Analysis Steps:**
+
+1. **Individual Content Examination**
+   - **Text Review**: Analyze the text for signs of sarcasm such as irony, exaggeration, contradiction, or literal statements. Detect any ambiguous language, slang, rhetorical questions, or cultural allusions that may support multiple interpretations.
+   - **Visual Review**: Inspect the image for elements like facial expressions, body language, objects, or settings that could indicate irony, sincerity, or ambiguity. Note details that either align with or oppose the text.
+
+2. **Cross-Modal Synthesis**
+   - Assess the interaction between the text and image. Determine if they are congruent, contradictory, or balanced. Identify any mismatches, contrasts, or ambiguous cues that might point to sarcasm, non-sarcasm, or neutrality.
+
+3. **Contextual and Societal Considerations**
+   - Examine cultural, social, or situational contexts that may influence the interpretation. Evaluate any references to cultural phenomena, memes, or societal norms that could convey sarcasm, straightforwardness, or ambiguous humor.
+   - Recognize cases with unclear or conflicting context and reflect on how this impacts your confidence level.
+
+4. **Classification with Rationale**
+   - Determine if the pair is **sarcastic**, **non-sarcastic**, or **neutral.**
+   - In **{x} words** or fewer, provide a brief rationale linking key observations from both text and image to your classification.
+
+5. **Confidence Assessment**
+   - Provide a confidence score between **0 and 1** indicating your certainty in the classification. For "neutral," this score should represent the extent to which the evidence is balanced or ambiguous.
+
+**Output Requirements**
+- Return your response **in strict JSON format** with the fields:
+  - `classification`: "sarcastic", "non-sarcastic", or "neutral"
+  - `rationale`: A concise explanation (≤ {x} words)
+  - `score`: A floating-point number between 0 and 1"""
+
+prompt_3 = """Your task is to analyze a text-image pair and classify it as "sarcastic," "non-sarcastic," or "neutral." Additionally, provide a concise rationale for your classification and a confidence score ranging from 0 to 1.
+
+**Analysis Steps:**
+
+1. **Text and Image Examination**
+   - **Text Analysis**: Evaluate the text for potential sarcasm markers such as irony, exaggeration, contradiction, rhetorical devices, or ambiguous phrasing. Consider slang, cultural references, and contextual nuances.  
+   - **Image Analysis**: Assess the image for visual cues like facial expressions, gestures, objects, or scene elements that may indicate irony, sincerity, or ambiguity. Determine whether the image reinforces or contradicts the text.
+
+2. **Cross-Modal Relationship Assessment**
+   - Analyze how the text and image interact. Identify whether they align, contrast, or create an unexpected relationship. Look for inconsistencies, exaggerations, or contextual contradictions that may indicate sarcasm.
+
+3. **Contextual Considerations**
+   - Take into account any relevant cultural, social, or situational context that could influence interpretation. Evaluate references to cultural symbols, memes, or social norms that might suggest sarcasm, sincerity, or neutrality.
+   - Acknowledge cases where context is unclear or contradictory, and factor this into your confidence assessment.
+
+4. **Classification and Explanation**
+   - Assign one of the three classifications: **"sarcastic," "non-sarcastic," or "neutral."**
+   - Provide a concise rationale (limited to **{x} words**) linking observed text and image cues to your classification.
+
+5. **Confidence Score**
+   - Provide a confidence score between **0 and 1**, reflecting the certainty of your classification. If the classification is ambiguous, the score should be lower.
+
+**Output Requirements**:
+- Return the response strictly in **JSON format** with the following fields:
+  - `classification`: "sarcastic", "non-sarcastic", or "neutral"
+  - `rationale`: A concise explanation (≤ {x} words)
+  - `score`: A floating-point number between 0 and 1"""

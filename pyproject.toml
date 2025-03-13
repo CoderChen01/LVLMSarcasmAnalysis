@@ -1,0 +1,52 @@
+[project]
+name = "lvlm_sarcasm_analysis"
+version = "1.0.0"
+description = "Code for the paper 'Seeing Sarcasm Through Different Eyes: Analyzing Multimodal Sarcasm Perception in Large Vision-Language Models'"
+authors = [
+    { name = "Junjie Chen", email = "jorji.chen@gmail.com"},
+    { name = "Xuyang Liu", email = "liuxuyang@stu.scu.edu.cn"},
+]
+maintainers = [
+    { name = "Junjie Chen", email = "jorji.chen@gmail.com"}
+]
+readme = "README.md"
+license = { text = "GPL-3.0" }
+requires-python = ">=3.8"
+
+[project.scripts]
+lvlm-sarc-evaluator = "lvlm_sarcasm_analysis.__main__:run_sarcasm_bench"
+lvlm-sarc-analysizer = "lvlm_sarcasm_analysis.__main__:analysizer"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = "^2.5.1"
+transformers = "^4.46.3"
+datasets = "^3.1.0"
+openai = "^1.55.2"
+pillow = ">=10.3.0,<11.0.0"
+jsonlines = "^4.0.0"
+click = "^8.1.7"
+loguru = "^0.7.2"
+accelerate = "^1.1.1"
+vllm = "0.6.6"
+evaluate = "^0.4.3"
+scikit-learn = "^1.5.2"
+torchmetrics = "^1.6.0"
+tomli = "^2.2.1"
+pingouin = "^0.5.5"
+krippendorff = "^0.8.0"
+mpl-chord-diagram = "^0.4.1"
+timm = "0.9.10"
+mistral-common = "^1.5.2"
+hf-transfer = "^0.1.9"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+pytest = "^8.3.4"
+ipywidgets = "^8.1.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

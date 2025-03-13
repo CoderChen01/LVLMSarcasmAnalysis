@@ -1,0 +1,30 @@
+{
+    "model_name_alias": {
+        "HuggingFaceTB/SmolVLM-Instruct": "smo-2B",
+        "OpenGVLab/InternVL2-2B": "int2-2B",
+        "Qwen/Qwen2-VL-2B-Instruct": "qw2-2B",
+        "microsoft/Phi-3.5-vision-instruct": "phi3.5-4B",
+        "llava-hf/llava-v1.6-mistral-7b-hf": "lav1.6-7B",
+        "llava-hf/llava-1.5-7b-hf": "lav1.5-7B",
+        "Qwen/Qwen2-VL-7B-Instruct": "qw2-7B",
+        "OpenGVLab/InternVL2-8B": "int2-8B",
+        "llava-hf/llava-1.5-13b-hf": "lav1.5-13B",
+        "meta-llama/Llama-3.2-11B-Vision": "lam3.2-11B",
+        "Qwen/Qwen2-VL-72B-Instruct": "qw2-72B",
+        "OpenGVLab/InternVL2-Llama3-76B": "int2-76B"
+    },
+    "sorted_model_names": [
+        "HuggingFaceTB/SmolVLM-Instruct",
+        "microsoft/Phi-3.5-vision-instruct",
+        "OpenGVLab/InternVL2-2B",
+        "OpenGVLab/InternVL2-8B",
+        "OpenGVLab/InternVL2-Llama3-76B",
+        "Qwen/Qwen2-VL-2B-Instruct",
+        "Qwen/Qwen2-VL-7B-Instruct",
+        "Qwen/Qwen2-VL-72B-Instruct",
+        "llava-hf/llava-1.5-7b-hf",
+        "llava-hf/llava-1.5-13b-hf",
+        "llava-hf/llava-v1.6-mistral-7b-hf",
+        "meta-llama/Llama-3.2-11B-Vision"
+    ]
+}

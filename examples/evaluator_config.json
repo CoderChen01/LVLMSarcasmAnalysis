@@ -1,0 +1,52 @@
+{
+    "base_urls": {
+        "Qwen/Qwen2-VL-7B-Instruct": [
+            "http://localhost:8000/v1"
+        ],
+        "Qwen/Qwen2-VL-2B-Instruct": [
+            "http://localhost:8000/v1"
+        ],
+        "llava-hf/llava-1.5-7b-hf": [
+            "http://localhost:8000/v1"
+        ],
+        "llava-hf/llava-1.5-13b-hf": [
+            "http://localhost:8000/v1"
+        ],
+        "microsoft/Phi-3.5-vision-instruct": [
+            "http://localhost:8000/v1"
+        ],
+        "OpenGVLab/InternVL2-2B": [
+            "http://localhost:8000/v1"
+        ],
+        "OpenGVLab/InternVL2-8B": [
+            "http://localhost:8000/v1"
+        ],
+        "HuggingFaceTB/SmolVLM-Instruct": [
+            "http://localhost:8000/v1"
+        ],
+        "HuggingFaceM4/Idefics3-8B-Llama3": [
+            "http://localhost:8000/v1"
+        ],
+        "llava-hf/llava-v1.6-mistral-7b-hf": [
+            "http://localhost:8000/v1"
+        ],
+        "mistralai/Pixtral-12B-2409": [
+            "http://localhost:8000/v1"
+        ],
+        "meta-llama/Llama-3.2-11B-Vision": [
+            "http://localhost:8000/v1"
+        ]
+    },
+    "metadata": {
+        "is_request": true,
+        "prompt_modes": [
+            "direct-classification",
+            "non-sarcastic-perspective",
+            "sarcastic-perspective",
+            "neutral-classification"
+        ]
+    },
+    "api_keys": [
+        "sk-proj-x"
+    ]
+}

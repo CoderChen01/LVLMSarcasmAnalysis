@@ -1,0 +1,84 @@
+[prompts]
+prompt_1 = """Your task is to analyze a text-image pair to determine if it is "sarcastic" or "non-sarcastic," and provide both a concise rationale for your conclusion and a confidence score between 0 and 1.
+
+**Analysis Steps:**
+
+1. **Separate Content Analysis**  
+   - **Text Analysis**: Carefully parse the text. Note any markers of irony, hyperbole, contradiction, or literal meaning. Consider nuances like slang, rhetorical questions, cultural references, or unusual phrasing.  
+   - **Image Analysis**: Thoroughly observe the image. Look for facial expressions, gestures, objects, or scene elements that may hint at irony or sincerity. Pay attention to visual details that either reinforce or contradict the text.
+
+2. **Cross-Modal Interaction**  
+   - Examine how the text and image combine. Do they contradict or reinforce each other? Are there mismatches (e.g., the text describes a scenario that is visually contradicted)? Are there subtle cues that suggest sarcasm (e.g., an apparently cheerful text alongside a mocking image)?
+
+3. **Contextual and Cultural Evaluation**  
+   - Consider relevant cultural, social, or situational factors. If either component relies on shared knowledge (e.g., current events, memes, pop culture), determine whether that context conveys irony or sarcasm.  
+   - Acknowledge ambiguous or borderline cases. If context is missing or conflicting, decide how it affects your confidence level.
+
+4. **Classification and Rationale**  
+   - Decide if the overall sentiment is **sarcastic** or **non-sarcastic.**  
+   - Summarize the strongest evidence guiding your decision in a concise rationale, limited to **{x} words**. Clearly connect the observed cues (from text and image) to support your conclusion.
+
+5. **Confidence Scoring**  
+   - Assign a confidence score between **0 and 1**. This reflects how certain you are of your classification, considering all nuances and ambiguities.
+
+**Output Requirements**:
+- Return your answer **strictly in JSON format** with the following fields only:
+  - `classification`: "sarcastic" or "non-sarcastic"
+  - `rationale`: A brief text rationale (≤ {x} words)
+  - `score`: A float between 0 and 1"""
+
+prompt_2 = """Your task is to examine a text-image pair and determine if it is "sarcastic" or "non-sarcastic." You must also provide a succinct rationale explaining how you reached that conclusion, as well as a confidence score between 0 and 1.
+
+**Analysis Steps:**
+
+1. **Individual Content Examination**  
+   - **Text Review**: Look carefully at the text. Watch for signs of irony, exaggeration, contradiction, or direct statements. Consider subtle language elements like slang, rhetorical questions, or cultural references.  
+   - **Visual Review**: Inspect the image closely. Note any facial expressions, body language, objects, or contextual clues that suggest irony or straightforwardness. Identify details that either align with or diverge from the text.
+
+2. **Cross-Modal Synthesis**  
+   - Determine how the text and image interact. Are they congruent or contradictory? Is there an intentional mismatch (e.g., cheerful wording paired with a solemn or mocking image)? Watch for any cues that amplify or diminish sarcasm.
+
+3. **Contextual and Societal Considerations**  
+   - Assess how cultural, social, or situational context may shape your interpretation of sarcasm. If the text or image includes references that require background knowledge (e.g., current trends, memes, or historical/cultural information), evaluate how they might convey irony.  
+   - Recognize potential ambiguity. If crucial context is unclear or conflicting, reflect that in your confidence.
+
+4. **Classification with Rationale**  
+   - Conclude whether the pair is **sarcastic** or **non-sarcastic.**  
+   - In **{x} words** or fewer, briefly describe your reasoning, linking the key observations from both text and image.
+
+5. **Confidence Assessment**  
+   - Provide a confidence score from **0 to 1** to indicate how strongly you stand by your conclusion, accounting for nuances and uncertainties.
+
+**Output Requirements**  
+- Return your response **in strict JSON format** with the fields:
+  - `classification`: "sarcastic" or "non-sarcastic"
+  - `rationale`: A concise explanation (≤ {x} words)
+  - `score`: A floating-point number between 0 and 1"""
+
+prompt_3 = """Your task is to evaluate a text-image pair for sarcasm, classify it as either "sarcastic" or "non-sarcastic," and provide a brief explanation and a confidence score (0–1).
+
+**Analysis Steps:**
+
+1. **Text and Image Breakdown**  
+   - **Text Examination**: Analyze the written content for indicators of sarcasm such as irony, contradiction, parody, or rhetorical flair. Consider informal language, cultural idioms, or contextual hints.  
+   - **Image Examination**: Observe visual elements like facial expressions, gestures, environment, and objects. Decide whether these visuals reinforce or negate the tone of the text.
+
+2. **Integrated Analysis**  
+   - Combine insights from the text and image. Do they align seamlessly, or is there tension suggesting sarcasm? Check for any incongruity (e.g., overly positive language paired with a distressing or mocking visual).
+
+3. **Contextual and Cultural Clues**  
+   - Account for any cultural or situational nuances that might influence sarcasm detection. If the text-image pair references memes, trending topics, or shared cultural knowledge, factor those details into your analysis.  
+   - Be mindful of partial or missing context, and reflect that in your final confidence score if needed.
+
+4. **Conclusion and Rationale**  
+   - Decide definitively: **sarcastic** or **non-sarcastic.**  
+   - Provide a short rationale, limited to **{x} words**, highlighting the most compelling evidence supporting your conclusion.
+
+5. **Confidence Level**  
+   - Offer a score between **0 and 1** indicating how confident you are in the classification, after considering all relevant cues and ambiguities.
+
+**Output Requirements**  
+- Return your final answer **strictly in JSON**, containing:
+  - `classification`: "sarcastic" or "non-sarcastic"
+  - `rationale`: A concise explanation (≤ {x} words)
+  - `score`: A float in the range [0, 1]"""
