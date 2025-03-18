@@ -2,7 +2,7 @@
 
 ---
 
-[![arXiv](https://img.shields.io/badge/arXiv-12503.12149-b31b1b.svg?style=flat-square)](https://arxiv.org/abs/2503.12149)
+[![arXiv](https://img.shields.io/badge/arXiv-2503.12149-b31b1b.svg?style=flat-square)](https://arxiv.org/abs/2503.12149)
 
 With the advent of large vision-language models (LVLMs) demonstrating increasingly human-like abilities, a pivotal question emerges: do different LVLMs interpret multimodal sarcasm differently, and can a single model grasp sarcasm from multiple perspectives like humans? To explore this, we introduce an analytical framework using systematically designed prompts on existing multimodal sarcasm datasets. Evaluating 12 state-of-the-art LVLMs over 2,409 samples, we examine interpretive variations within and across models, focusing on confidence levels, alignment with dataset labels, and recognition of ambiguous ``neutral'' cases. Our findings reveal notable discrepancies---across LVLMs and within the same model under varied prompts. While classification-oriented prompts yield higher internal consistency, models diverge markedly when tasked with interpretive reasoning. These results challenge binary labeling paradigms by highlighting sarcasm’s subjectivity. We advocate moving beyond rigid annotation schemes toward multi-perspective, uncertainty-aware modeling, offering deeper insights into multimodal sarcasm comprehension.
 
