@@ -34,7 +34,7 @@ logger.add(
 
 import click
 
-from sarcbench.generator_map_functions import local_data_map_func, requests_map_func
+from lvlm_sarcasm_analysis.generator_map_functions import local_data_map_func, requests_map_func
 
 
 @click.group(chain=True, invoke_without_command=False)

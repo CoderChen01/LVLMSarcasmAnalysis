@@ -12,5 +12,9 @@
     "**/Thumbs.db": true,
     "**/__pycache__": true
   },
-  "explorerExclude.backup": {}
+  "explorerExclude.backup": {},
+  "workbench.colorCustomizations": {
+    "minimap.background": "#11111100",
+    "scrollbar.shadow": "#11111100"
+  }
 }
