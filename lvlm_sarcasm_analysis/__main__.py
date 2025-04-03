@@ -239,7 +239,7 @@ def write_log_to_dataset(
     type=click.Choice(["agreement_gt", "model_nll", "neutral_label", "inter_prompt"]),
     multiple=True,
 )
-def analysizer(
+def analyzer(
     config_path: str,
     data_path: str,
     output_path: str,
@@ -251,7 +251,7 @@ def analysizer(
     with open(config_path, "r") as f:
         META_DATA = json.load(f)
 
-    from sarcbench.analysizer import (
+    from sarcbench.analyzer import (
         BaseReporter,
         GroundTruthAgreementReporter,
         ModelNllReporter,

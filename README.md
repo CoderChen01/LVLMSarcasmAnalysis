@@ -61,28 +61,28 @@ After performing evaluation for each model, we can get the final dataset and exe
 ### Inter-Prompt Consistency Analysis
 
 ```bash
-lvlm-sarc-analysizer --data-path <final-dataset-path> --output-path <result-output-path> --config-path <config-path> -A inter_prompt
+lvlm-sarc-analyzer --data-path <final-dataset-path> --output-path <result-output-path> --config-path <config-path> -A inter_prompt
 ```
 
 ### Agreement with Ground Truth Analysis
 
 ```bash
-lvlm-sarc-analysizer --data-path <final-dataset-path> --output-path <result-output-path> --config-path <config-path> -A agreement_gt
+lvlm-sarc-analyzer --data-path <final-dataset-path> --output-path <result-output-path> --config-path <config-path> -A agreement_gt
 ```
 
 ### Model Confidence Analysis
 
 ```bash
-lvlm-sarc-analysizer --data-path <final-dataset-path> --output-path <result-output-path> --config-path <config-path> -A model_nll
+lvlm-sarc-analyzer --data-path <final-dataset-path> --output-path <result-output-path> --config-path <config-path> -A model_nll
 ```
 
 ### Neutral Label Aalysis
 
 ```bash
-lvlm-sarc-analysizer --data-path <final-dataset-path> --output-path <result-output-path> --config-path <config-path> -A neutral_label
+lvlm-sarc-analyzer --data-path <final-dataset-path> --output-path <result-output-path> --config-path <config-path> -A neutral_label
 ```
 
 > **Config File**
 > 
-> `lvlm-sarc-analysizer` will automatically draw the data graph. However, due to the long model name, the chart layout is not good, so we introduced a configuration file to configure short name for the model name to facilitate better layout of the data graph.
-> [examples/analysizer_config.json](examples/analysizer_config.json) is an example of this configuration file, you can use it directly by specifying it directly through `--config-path`.
+> `lvlm-sarc-analyzer` will automatically draw the data graph. However, due to the long model name, the chart layout is not good, so we introduced a configuration file to configure short name for the model name to facilitate better layout of the data graph.
+> [examples/analyzer_config.json](examples/analyzer_config.json) is an example of this configuration file, you can use it directly by specifying it directly through `--config-path`.
